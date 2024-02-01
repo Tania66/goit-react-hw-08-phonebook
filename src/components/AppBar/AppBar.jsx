@@ -5,6 +5,8 @@ import AuthMenu from 'components/AuthMenu';
 import { useSelector } from 'react-redux';
 import { isLogin } from '../../redux/auth/authSelector';
 import defaultAvatar from './default-phoneBook.png' 
+import BurgerMenu from 'components/BurgerMenu/MobileMenu';
+
 
 
 export const AppBar = () => {
@@ -16,9 +18,10 @@ export const AppBar = () => {
       <Logo>
 <Img src={avatar} alt='phonebook'/>
         <Navigation />
-      </Logo>
-      
+      </Logo>     
       {login ? <UserMenu /> : <AuthMenu />}
+
+<BurgerMenu/>
 
     </Header>
   );
